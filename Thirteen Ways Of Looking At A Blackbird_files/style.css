@@ -1,0 +1,789 @@
+* {
+		padding:0;
+		margin:0;
+	}
+
+	html, body {
+		height:100%;
+		background: #fff;
+		
+		
+	}
+
+	audio {
+		width: 120px;
+		height: 40px;
+		display: block; 
+		margin: 0px;
+	}
+	.skrollr-desktop body {
+		height:100% !important;
+		max-width: 1920px;
+		max-height: 5760px;
+		overflow-x: hidden;
+	}
+
+
+	p {
+		margin:1em 0;
+		font-family: Cinzel, serif;
+		font-size: 26px;
+		text-align: left;
+	}
+
+		
+
+	#skrollr-body {
+		height:100%;
+		overflow:visible;
+		position:relative;
+		max-width: 1920px;
+		max-height: 5760px;
+	}
+
+	.gap {
+		background:transparent center no-repeat;
+		background-size:cover;
+		position: relative;
+	}
+
+	.skrollr .gap {
+		background:transparent !important;
+	}
+
+	.gap-50 {
+		height:50%;
+	}
+
+	.gap-100 {
+		height:100%;
+	}
+	
+	
+ 	
+		
+	header {
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    text-align: center;
+    font-size: 18px;
+    -webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+	/* Animations */
+	@keyframes circleSpin
+	{
+		from{ 
+				transform: rotate(0deg);
+			} to {
+				transform: rotate(360deg);
+			}
+		
+	}
+	
+	@keyframes buggyPull
+	{
+		from{
+			transform: translate(0px,0px);
+		}to{
+			transform: translate(1200%, 0);
+			opacity: 0;
+			
+		} 
+		
+	}
+	
+	@keyframes birdOver
+	{
+		from{
+			transform: translate(0px,0px);
+		}to{
+			transform: translate(-2500%, 0);
+			opacity: 0;
+			
+		} 
+		
+	}
+	
+
+	
+	@keyframes windowFly
+	{
+		from{
+			transform: translate(0,0);
+			opacity: 1;
+		}to{
+			transform: translate(1400px, 0);
+			opacity: 0;
+		}
+		
+	}
+	
+	@keyframes wallaceFly
+	{
+		from{
+			transform: translate(0,0);
+			opacity: 1;
+		}to{
+			transform: translate(900px, 0);
+			opacity: 0;
+		}
+		
+	}
+	
+	@keyframes snowflake
+	{
+		from{
+			transform: translate(0, 0);
+			opacity: .5;
+		}to{
+			transform: translate(0, 550px);
+			opacity: 0;
+		}
+		
+	}
+/* Navigation Bar settings */
+.header{position: fixed; top:0;}
+    	
+		
+		
+		#nav 
+		{
+			display:block;
+			padding:0;
+			margin:0;
+			width:100%;
+		}
+		
+		#nav > li 
+		{
+			font-family: "Josefin Sans", Sans-Serif;
+			display:inline-block;
+			padding:1em;
+			margin:0;
+		}
+		
+		#nav li a
+		{
+			text-transform: uppercase;
+		 	text-decoration: none;
+		  	color:#333
+		  }
+		
+		.container
+		{
+			width:100%; 
+			position: relative; 
+			border: 1px solid red;
+		}
+		
+		
+		/* Button Responsive Menu*/
+		.btn-responsive-menu
+		{
+			display:none;
+			float: right;
+			padding:5px;
+			cursor:pointer;
+			margin:  10px 10px 10px 0;
+			color: #fff;
+			z-index:100;
+		}
+		
+		.icon-bar 
+		{
+			display: block;
+			width: 18px;
+			height: 2px;
+			margin:5px;
+			background-color: #000;
+			-webkit-border-radius: 1px;
+			-moz-border-radius: 1px;
+			border-radius: 1px;
+		}	
+	
+	/* Content */
+		.box
+		{ 
+			width:50%;
+			margin-left: 25%;
+			margin-top:20%;
+			position:absolute;
+			border: 1px none blue;
+		}
+		
+	
+		
+		.box-home
+		{
+			
+			width:100%;
+			margin-left: 25%;
+			margin-top:20%;
+			position:absolute;
+			
+			
+			
+		}
+
+		.box h2
+		{
+			font-size: 20;
+			font-family: Cinzel, serif;
+			color: 333;
+			text-align: center;
+			
+		}
+		.box-home h2
+		{
+			font-size: 60px; 
+			color: #333; 
+			font-weight:300;
+			
+		}
+		
+	
+		
+		/* Other text setting and Position */
+		#headText
+ 	{
+ 		font-family: Cinzel, serif;
+		font-size: 60px;
+ 		position: absolute;	
+ 		width: 100%;
+	}
+		
+	.hPos
+	{
+		font-size: 32px;
+		
+		
+	}
+	
+	.pPos
+	{
+		
+		
+	}
+	
+	/* Image Settings */
+	
+	.image
+	{
+		
+	}
+	
+	.sImage
+	{
+		position: absolute;
+		width: 100%;
+		height: 50%;
+	}
+	
+	#walPerch
+	{
+		overflow: hidden;
+		animation-name: windowPerch;
+		animation-duration: 6000ms;
+		animation-iteration-count: infinite;
+	}
+	
+	#walFly
+	{
+		overflow: hidden;
+		animation-name: wallaceFly;
+		animation-duration: 6000ms;
+		animation-iteration-count: infinite;
+	}
+	
+	#circles
+	{
+		animation-name: circleSpin;
+		animation-duration: 4000ms;
+		animation-iteration-count: infinite;
+	}
+
+
+	#Carrage
+	{
+		overflow: hidden;
+		animation-name: buggyPull;
+		animation-duration: 6000ms;
+		animation-iteration-count: infinite;
+	}
+	
+	#carBird
+	{
+		overflow: hidden;
+		animation-name: birdOver;
+		animation-duration: 6000ms;
+		animation-iteration-count: infinite;
+	}
+	
+	#winfly
+	{
+		overflow: hidden;
+		animation-name: windowFly;
+		animation-duration: 6000ms;
+		animation-iteration-count: infinite;
+	}
+	
+	
+	
+	#snow
+	{
+		overflow: hidden;
+		animation-name: snowflake;
+		animation-duration: 6000ms;
+		animation-iteration-count: infinite;
+	}
+
+	.footer
+	{
+		position: absolute;
+		top: 8300px;
+		height: 100px;
+		
+	}
+
+	
+
+@media(max-width:767px) {
+	
+	
+	
+		/* Menu */
+		#nav 		
+		{
+			display:none;
+			margin: 0px 0 0px 0px;
+			padding:0;float:left;
+			width:100%; 
+			list-style: none;
+			background: #fff!important;
+		}
+		
+		#nav > li 	
+		{
+			float: left;
+			margin: 0 0px 0 0;
+			padding:0;
+			position: relative;
+			display: block;
+			width:100%;
+		}
+		
+		#nav a 	
+		{
+			color: #000;
+			display: block;
+		 	font: 14px;
+		 	padding: 14px 20px;
+		 }
+		 
+		#nav a:hover 
+		{
+			background:#666;
+		}
+		
+		.btn-responsive-menu
+		{
+			display:block
+		}
+		
+
+		.box
+		{ 
+			width:50%;
+			margin-left: 25%;
+			margin-top:27%;
+			position:absolute;
+		}
+		
+		.box-home
+		{
+			width:50%;
+			margin-left: 25%;
+			margin-top:27%;
+			position:absolute;
+		}
+
+		
+		/* image contents */
+		
+		/* Stanza 1 */
+		
+		#mountains
+		{
+			position: absolute;
+			top: -30%!important;
+			height: 300px;
+			width: 400px;
+			
+		}
+		
+		#stanzeOneBird
+		{
+			height: 400px;
+			width: 300px;
+			
+		}
+		
+		#tree
+		{
+			height: 500px;
+			width: 400px;
+		}
+		
+		/* Stanza 2 */
+		
+		#svgLeaves
+		{
+			height: 600px;
+			width: 500px;
+			
+		}
+		
+		#wind
+		{
+			height: 300px;
+			width: 200px;
+			
+		}
+		
+		#stanzaTwoBird
+		{
+			height: 200px;
+			width: 150px;
+			
+		}
+		
+		#womanSil
+		{
+			height: 400px;
+			width: 300px;
+			
+		}
+		
+		#manSil
+		{
+			height: 400px;
+			width: 300px;
+			
+		}
+		
+		#birdSil
+		{
+			height: 400px;
+			width: 300px;
+			
+		}
+		
+		/* Stanza 3 */
+		
+		#iceWindow
+		{
+			height: 600px;
+			width: 500px;
+			
+		}
+		
+		#snow
+		{
+			height: 50px;
+			width: 50px;
+			
+		}
+		
+		#winFly
+		{
+			height: 400px;
+			width: 300px;
+			
+		}
+		
+		/* Stanza 4 */ 
+		
+		#stanzaFourBird
+		{
+			height: 400px;
+			width: 300px;
+			
+		}
+		
+		#musicNote
+		{
+			height: 100px;
+			width: 100px;
+			
+		}
+		
+		#musicNoteTwo
+		{
+			height: 100px;
+			width: 100px;
+			
+		}
+		
+		#birdmusic
+		{
+			height: 150px;
+			width: 100px;
+			
+		}
+		/* Stanza 5 */
+		
+		#cicleBird
+		{
+			height: 400px;
+			width: 300px;
+			
+		}
+		
+		#circles
+		{
+			height: 600px;
+			width: 600px;
+			
+		}
+		
+		/* Stanza 6 */
+		
+		#carBird
+		{
+			height: 150px;
+			width: 100px;
+			
+		}
+		
+		#Carrage
+		{
+			height: 200px;
+			width: 200px;
+			
+		}
+		
+		/* Stanza 7 */
+		
+		#walFly
+		{
+			height: 150px;
+			width: 100px;
+			
+		}
+		
+		#wallSil
+		{
+			height: 400px;
+			width: 450px;
+			
+		}
+		
+		#walPerch
+		{
+			height: 50px;
+			width: 100px;
+			
+		}
+		
+	}  
+
+@media(min-width:800px) and (max-width:1680px) {
+	
+	
+	
+		
+		
+		
+
+	
+		
+		.box-home
+		{
+			left: -25%!important;
+			position:absolute;
+		}
+
+		
+		
+			/* image contents */
+		
+		/* Stanza 1 */
+		#stanzeOneBird
+		{
+			height: 400px;
+			width: 300px;
+			
+		}
+		
+		#tree
+		{
+			height: 500px;
+			width: 400px;
+		}
+		
+		/* Stanza 2 */
+		
+		#svgLeaves
+		{
+			height: 600px;
+			width: 500px;
+			
+		}
+		
+		#wind
+		{
+			height: 300px;
+			width: 200px;
+			
+		}
+		
+		#stanzaTwoBird
+		{
+			height: 200px;
+			width: 150px;
+			
+		}
+		
+		#womanSil
+		{
+			height: 500px;
+			width: 400px;
+			
+		}
+		
+		#manSil
+		{
+			height: 500px;
+			width: 400px;
+			
+		}
+		
+		#birdSil
+		{
+			height: 500px;
+			width: 400px;
+			
+		}
+		
+		/* Stanza 3 */
+		
+		#iceWindow
+		{
+			height: 800px;
+			width: 800px;
+			
+		}
+		
+		#snow
+		{
+			height: 50px;
+			width: 50px;
+			
+		}
+		
+		#winFly
+		{
+			height: 400px;
+			width: 300px;
+			
+		}
+		
+		/* Stanza 4 */ 
+		
+		#stanzaFourBird
+		{
+			height: 400px;
+			width: 300px;
+			
+		}
+		
+		#musicNote
+		{
+			height: 100px;
+			width: 100px;
+			
+		}
+		
+		#musicNoteTwo
+		{
+			height: 100px;
+			width: 100px;
+			
+		}
+		
+		#birdmusic
+		{
+			height: 150px;
+			width: 100px;
+			
+		}
+		/* Stanza 5 */
+		
+		#cicleBird
+		{
+			height: 400px;
+			width: 300px;
+			
+		}
+		
+		#circles
+		{
+			height: 650px;
+			width: 650px;
+			
+		}
+		
+		/* Stanza 6 */
+		
+		#carBird
+		{
+			height: 150px;
+			width: 100px;
+			
+		}
+		
+		#Carrage
+		{
+			height: 200px;
+			width: 200px;
+			
+		}
+		
+		/* Stanza 7 */
+		
+		#walFly
+		{
+			height: 150px;
+			width: 100px;
+			
+		}
+		
+		#wallSil
+		{
+			height: 400px;
+			width: 500px;
+			
+		}
+		
+		
+	
+		
+		#walPerch
+		{
+			height: 0px;
+			width: 0px;
+			
+		}
+		
+	}  
+	
+
